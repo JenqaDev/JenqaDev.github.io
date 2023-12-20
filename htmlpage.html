@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+        .disabled{
+            color:lightgray !important
+        }
+        .active {
+            color: cornflowerblue !important
+        }
+    </style>
+    <title>InvisibleTroll</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row bg-success">
+            <img src="abc.jpg" class="col-1" id="imagem" />
+            <ul class="nav justify-content-center col-11 bg-sucess">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark" aria-current="page" href="#">Registar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <img class="d-none" id="joia" src="data:image/jpeg;base64,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" height="1000"/>
+    </div>
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#imagem").on("mouseover", function () {
+                $("#joia").removeClass("d-none")
+                $("#joia").addClass("d-block")
+            });
+            $("#imagem").on("mouseleave", function () {
+                $("#joia").addClass("d-none")
+                $("#joia").removeClass("d-block")
+            });
+        });
+    </script>
+</body>
+</html>

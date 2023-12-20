@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>InvisibleToll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    font-style: oblique;
+    font-size: larger;
+}
+
+a:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+.nav-item .nav-link {
+  color: #000000;
+  font-size: 20;
+  font-weight: bolder;
+}
+</style>
+
+  </head>
+  <body>
+    <div
+      class="container col-6 rounded shadow-lg p-3 mb-5 rounded"
+      style="
+        margin-top: 10%;
+        height: 450px;
+        background-color: rgba(240, 205, 162, 0.5);
+        border: 0;
+        box-shadow: 0 0 90px 10px rgba(240, 205, 162, 1)!important    ;
+      "
+    >
+      <div class="row" style="height: 100%">
+        <div class="container col-7 " style="height: 100%;padding-left: 5%; padding-top: 10%;"><img src="/images/logo.png"alt="Logo"style="width:100%"></div>
+        <div class="container col-5">
+
+          <div class="container">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#menu1">Eu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#menu2">Empresa</a>
+              </li>
+            </ul>
+          
+            <div class="tab-content">
+              <div id="menu1" class="container tab-pane active"><br>
+                <ul class="list-group lead">
+                  <li class="list-group-item"><a class="nav-link g" aria-current="page" href="login.html" title="Login"><i class="fa-solid fa-user"></i></i>Login </a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="register.html" title="Register"><i class="fa-solid fa-circle-up"></i>Registo</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="Conta.html"><i class="fa-solid fa-car"></i>A minha conta</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a></li>
+                  <li class="list-group-item "><a style="color: black;text-decoration: none;"  aria-current="page" href="novaViagem.html"><i class="fa-solid fa-globe"></i>Nova Viagem</a></li>
+                  <li class="list-group-item"><a class="nav-link "  aria-current="page" href="Descontos.html"><i class="fa-solid fa-shop"></i>Descontos</a></li>
+
+                  
+                </ul>
+              </div>
+
+              <div id="menu2" class="container tab-pane fade"><br>
+                <ul class="list-group lead">
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="loginEmp.html" title="Login"><i class="fa-solid fa-user"></i></i>Login </a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerEmp.html" title="Register"><i class="fa-solid fa-circle-up"></i>Registo</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlaces.html" title="Register"><i class="fa-solid fa-circle-up"></i>Adicionar Locais</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesListEmp.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-car-side car"></i>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="homescreen.js"></script>
+    <script src="myJS.js"></script>
+  </body>
+</html>

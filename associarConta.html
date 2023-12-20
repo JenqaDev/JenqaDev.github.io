@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>InvisibleToll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+</head>
+<style>
+    html{
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .containerNav{
+        height: 15%;
+    }
+    .inputArea{
+        border-color: rgb(156, 113, 3);
+        line-height: 50px;
+    }
+    .butao{
+        width: 90%;
+        height: 50px;
+        border-color: goldenrod;
+        background-color: rgb(203, 198, 198) !important;
+    }
+    .checkbtn{
+        border-color:black;
+    }
+    .container1{
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80% !important;
+    }
+    .container2{
+        margin-top: 7%;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80% !important;
+    }
+    .labeltoinput{
+        margin-bottom: 5%;
+    }
+    .inputtoother{
+        margin-bottom: 10%;
+    }
+    body{
+        font-family:"Open Sans", Manjira
+    }
+    .validade{
+        width: 30% !important;
+    }
+    .inputText{
+        height:15% !important;
+    }
+</style>
+<body>
+    <div class="container containerNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top mt-3" style="background-color: #b27832;">
+            <div class="container">
+                <a class="navbar-brand" href="homescreen.html" tabindex="NBA"><img src="#" alt="InvisibleToll" height="24" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item active"><a class="nav-link text-warning" aria-current="page" href="login.html"><i class="text-dark fa-solid fa-user"></i></i> </a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" aria-current="page" href="register.html"><i class="fa-solid fa-circle-up"></i> </a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" aria-current="page" href="#"><i class="fa fa-flag-o text-danger"></i> </a></li>
+                        <li class="nav-item"><a class="nav-link text-info" aria-current="page" href="#"><i class="fa fa-bookmark-o text-info "></i> </a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container2">
+        <span>Registe-se aqui a sua matrícula</span>
+    </div>
+    <hr>
+    <div class="container1">
+        <form id="formContaBanc">
+            <label for="cartao" class="text-center labeltoinput">Número de Cartão:</label><br />
+            <input type="text" id="cartao" class="form-control col-12 lead inputArea inputtoother inputText" /><br />
+            <label for="mes" class=" labeltoinput">Validade:</label><br />
+            <input type="number" id="mes" class="form-control lead inputArea validade inputText" style="clear: left;float: left;" />
+            <input type="number" id="ano" class="form-control ms-3 lead inputArea validade inputtoother inputText" style="float: left; clear:right" /><br />
+            <label for="codigo" class=" labeltoinput col-12" style="margin-top:10%">Código de Segurança:</label><br />
+            <input type="text" id="codigo" class="form-control col-12 lead inputArea inputtoother inputText" /><br />
+            <label for="debito" class="form-check-label labeltoinput">Ativar débito direto</label>
+            <input type="checkbox" id="debito" class="form-check-input checkbtn ms-3 inputtoother" />
+        </form>
+    </div>
+    <hr>
+    <div class="container text-center" style=" margin-bottom: 10%; margin-top:10%">
+        <button type="submit" class="btn btn-secondary butao text-dark" style="margin-bottom: 10%" onclick="return validateForm()">Registe-se aqui</button>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="associarConta.js"></script>
+</body>
+</html>

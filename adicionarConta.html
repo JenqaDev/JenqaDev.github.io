@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>InvisibleToll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .containerNav {
+      height: 15%;
+    }
+    .inputArea {
+      border-color: rgb(156, 113, 3);
+      line-height: 50px;
+    }
+    .butao {
+      width: 90%;
+      height: 50px;
+      border-color: goldenrod;
+      background-color: rgb(203, 198, 198) !important;
+    }
+    .checkbtn {
+      border-color: black;
+    }
+
+    body {
+      font-family: "Open Sans", Manjira;
+    }
+  </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+           style="background-color: #f0cda2">
+          <div class="container">
+              <a class="navbar-brand" href="homescreen.html" tabindex="NBA">
+                  <img src="./images/logo.png" alt="InvisibleToll" height="24" />
+              </a>
+              <button class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html" title="Login">
+                              <i class="fa-solid fa-user"></i>Login
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="register.html" title="Registar"><i class="fa-solid fa-circle-up"></i>Registo</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Conta.html"><i class="fa-solid fa-car"></i>A minha conta</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="novaViagem.html"><i class="fa-solid fa-globe"></i>Nova Viagem</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Descontos.html"><i class="fa-solid fa-shop"></i>Descontos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="pagamentos.html"><i class="fa-solid fa-coins"></i>Pagamentos</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <div class="container col-6 rounded bg-white shadow-lg p-3 mb-5 rounded"
+           style="
+        margin-top: 10%;
+        border: 0;
+        box-shadow: 0 0 90px 10px rgba(240, 205, 162, 1) !important    ;
+      ">
+          <span class="lead display-4 fw-bolder">Adicione uma conta bancária</span>
+          <hr />
+          <form id="formContaBanc">
+              <label for="cartao" class="text-center labeltoinput">Número de Cartão:</label><br />
+              <input type="text"
+                     id="cartao"
+                     class="form-control col-12 lead inputArea inputtoother inputText" /><br />
+              <label for="mes" class="labeltoinput">Validade:</label><br />
+              <div class="row col-12 align-content-between">
+                  <div class="col-5">
+                      <input type="number"
+                             id="mes"
+                             class="form-control lead inputArea validade inputText"
+                             style="clear: left; float: left" />
+                  </div>
+
+                  <div class="col-5">
+                      <input type="number"
+                             id="ano"
+                             class="form-control ms-3 lead inputArea validade inputtoother inputText"
+                             style="float: left; clear: right" /><br />
+                  </div>
+              </div>
+              <label for="codigo" class="labeltoinput col-12" style="margin-top: 2%">Código de Segurança:</label><br />
+              <input type="text"
+                     id="codigo"
+                     class="form-control col-12 lead inputArea inputtoother inputText" /><br />
+              <label for="debito" class="form-check-label labeltoinput">Ativar débito direto</label>
+              <input type="checkbox"
+                     id="debito"
+                     class="form-check-input checkbtn ms-3 inputtoother" />
+          </form>
+      </div>
+      <hr />
+      <div class="container col-6 text-center"
+           style="margin-bottom: 2%; margin-top: 2%">
+          <button type="submit"
+                  class="btn btn-secondary butao text-dark"
+                  style="margin-bottom: 2%"
+                  onclick="return validateForm()">
+              Registe-se aqui
+          </button>
+      </div>
+      <div class="modal fade"
+           id="successModal"
+           tabindex="-1"
+           aria-labelledby="successModalLabel"
+           aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content"
+                   style="background-color: #28a745; color: #fff">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="successModalLabel">Success!</h5>
+                      <button type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      Your process was successful. Congratulations!
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="associarConta.js"></script>
+  </body>
+</html>

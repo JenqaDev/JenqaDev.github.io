@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>InvisibleToll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .container1 {
+      height: 85%;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 90% !important;
+    }
+    .containerNav {
+      height: 15%;
+    }
+    .inputArea {
+      border-color: rgb(156, 113, 3);
+      line-height: 50px;
+    }
+    .butao {
+      width: 90%;
+      height: 50px;
+      border-color: goldenrod;
+      background-color: rgb(203, 198, 198) !important;
+    }
+    .lead {
+      display: none;
+    }
+
+    .display-4:hover + hr + .lead {
+      display: block;
+    }
+    body {
+      background-image: url("./images/road.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+           style="background-color: #f0cda2">
+          <div class="container">
+              <a class="navbar-brand" href="homescreen.html" tabindex="NBA">
+                  <img src="./images/logo.png" alt="InvisibleToll" height="24" />
+              </a>
+              <button class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="loginEmp.html" title="Login">
+                              <i class="fa-solid fa-user"></i>Login
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="registerPlacesListEmp.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="registerPlaces.html"><i class="fa-solid fa-circle-up"></i>Adicionar Locais</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="QuemSomosEmp.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <div class="container col-6 rounded bg-white shadow-lg p-3 mb-5 rounded"
+           style="
+        margin-top: 10%;
+        border: 0;
+        box-shadow: 0 0 90px 10px rgba(240, 205, 162, 1) !important    ;
+      ">
+          <h class="display-4">Quem Somos?</h>
+          <hr />
+          <p class="lead">
+              À organização que se responsabiliza pela promoção da ideia e que está a
+              apostar no desenvolvimento da transformação digital dá-se o nome de
+              InvisibleToll. É uma empresa recém formada que se direciona à gerência e
+              gestão de serviços associados à identificação eletrónica de veículos.
+              Esta entidade encontra-se dividida em diversos setores, nos quais
+              passamos a destacar os seguintes:<br />
+              • A secção de registo de passagens em autoestradas;<br />
+              • A secção de uso de parques de estacionamento;<br />
+              • A secção orientada à subscrição de utilizadores finais;<br />
+          </p>
+          <p class="display-4 mt-4">O nosso Produto</p>
+          <hr />
+          <p class="lead">
+              A InvisibleToll disponibiliza uma plataforma integrada que automatiza os
+              serviços de identificação eletrónica de veículos com soluções
+              informáticas.
+              <br />
+              O benefício central para os utilizadores é a significativa redução de
+              tempo e esforço ao passar por portagens e estacionamentos, graças ao
+              pagamento automático e à gestão integrada de serviços. A razão
+              convincente para o uso da InvisibleToll reside na modernização dos
+              processos, oferecendo uma experiência mais eficiente, fácil de usar e
+              flexível financeiramente, adaptada às necessidades individuais de cada
+              condutor
+          </p>
+          <p class="display-4 mt-4">O grupo 1</p>
+          <hr />
+          <p class="lead">
+              • João Pedro (120010)<br />
+              • Daniel Martins(115868)<br />
+              • Duarte Branco (119253)<br />
+              • Miguel Neto (119302)<br />
+              • Thiago Vicente(121497)<br />
+          </p>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="loginEsignin.js"></script>
+      <script src="myJS.js"></script>
+  </body>
+</html>

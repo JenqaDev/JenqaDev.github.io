@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>InvisibleToll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+           style="background-color: #f0cda2">
+          <div class="container">
+              <a class="navbar-brand" href="homescreen.html" tabindex="NBA">
+                  <img src="./images/logo.png" alt="InvisibleToll" height="24" />
+              </a>
+              <button class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html" title="Login">
+                              <i class="fa-solid fa-user"></i>Login
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="register.html" title="Registar"><i class="fa-solid fa-circle-up"></i>Registo</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Conta.html"><i class="fa-solid fa-car"></i>A minha conta</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="novaViagem.html"><i class="fa-solid fa-globe"></i>Nova Viagem</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Descontos.html"><i class="fa-solid fa-shop"></i>Descontos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="pagamentos.html"><i class="fa-solid fa-coins"></i>Pagamentos</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <div class="container col-6 rounded bg-white shadow-lg p-3 mb-5 rounded"
+           style="
+        margin-top: 10%;
+        border: 0;
+        box-shadow: 0 0 90px 10px rgba(240, 205, 162, 1) !important    ;
+      ">
+          <p class="lead display-6">
+              <span style="font-weight:bold;">A minha conta:</span>
+              <span data-bind="text: User"></span>
+          </p>
+          <hr />
+
+          <div class="container mt-4">
+              <div class="row">
+                  <!-- ko if: Matriculas().length > 0-->
+                  <div class="col-12">
+                      <p class="lead display-6">Matrículas:</p>
+                      <div class="row">
+                          <!-- ko foreach: Matriculas()-->
+                          <div class="col-2 mb-2">
+                              <div class="card">
+                                  <span style="margin: auto" data-bind="text: matricula">
+                                  </span>
+                              </div>
+                          </div>
+                          <!-- /ko -->
+                      </div>
+                  </div>
+                  <!-- /ko-->
+                  <div class="col-12 mt-2">
+                      <a href="matricula.html">Adicionar matricula</a>
+                  </div>
+
+                  <!-- ko if: CBancos().length > 0 -->
+                  <hr class="my-4" />
+                  <div class="col-12">
+                      <p class="lead display-6">Cartões:</p>
+                      <div class="row">
+                          <!-- ko foreach: CBancos() -->
+                          <div class="col-3 mb-2">
+                              <div class="card">
+                                  <span style="margin: auto" data-bind="text: numCard"> </span>
+                              </div>
+                          </div>
+                          <!-- /ko -->
+                      </div>
+                  </div>
+                  <!-- /ko -->
+                  <div class="col-12 mt-2">
+                      <a href="adicionarConta.html">Adicionar conta</a>
+                  </div>
+              </div>
+          </div>
+
+          <p class="lead">
+              <a class="link-offset-2-hover" href="MudeDeSenha.html"></a>
+          </p>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+      <script src="Conta.js"></script>
+      <script src="myJS.js"></script>
+  </body>
+</html>

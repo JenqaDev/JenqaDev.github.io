@@ -17,6 +17,7 @@ function validarLogin() {
       password == data.empresas[i].password
     ) {
       data.activeEmp = i;
+      data.active = "";
       localStorage.setItem("data-grp1", JSON.stringify(data));
       $("#successModal").modal("show");
 
@@ -47,7 +48,8 @@ function validarSignin() {
       numero: numero,
     };
     data.empresas.push(newEmp);
-    data.activeEmp = data.empresas.length;
+    data.activeEmp = data.empresas.length - 1;
+    data.active = "";
     localStorage.setItem("data-grp1", JSON.stringify(data));
 
     $("#successModal").modal("show");

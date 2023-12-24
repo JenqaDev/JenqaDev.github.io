@@ -1,3 +1,15 @@
+let data = JSON.parse(localStorage.getItem("data-grp1"));
+
+let vm = function () {
+  let self = this;
+  self.active = ko.observable("");
+  self.activeEmp = ko.observable("");
+
+  self.active(parseInt(data.active));
+  self.activeEmp(parseInt(data.activeEmp));
+
+};
+
 let dataGrp1 = {
   active: "",
   users: [
@@ -49,17 +61,17 @@ let dataGrp1 = {
   activeEmp: "",
   descounts: [
     {
-      descricao: "20% de DESCONTO IMEDIATO na sua loja [LOJA]!",
-      menssagem: "Aproveite!",
+      descricao: "Descrição 1",
+      menssagem: "Aproveite",
       imagem: "https://cdn-icons-png.flaticon.com/512/928/928202.png",
     },
     {
-      descricao: "Leve 3 pague 2 na sua [LOJA]",
-      menssagem: "IMPERDÍVEL!",
+      descricao: "Descrição 2",
+      menssagem: "...",
       imagem:
         "https://img.freepik.com/psd-gratuitas/icone-de-desconto-de-renderizacao-3d_220664-2532.jpg",
     },
-    ],
+  ],
 };
 
 //localStorage.removeItem("data-grp1");
@@ -68,4 +80,7 @@ $(document).ready(function () {
   if (save == null) {
     localStorage.setItem("data-grp1", JSON.stringify(dataGrp1));
   }
+  let Vm = new vm();
+  ko.applyBindings(Vm);
+  console.log(Vm);
 });

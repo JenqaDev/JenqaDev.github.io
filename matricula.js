@@ -25,7 +25,7 @@ function validarMatricula() {
   var matricula2 = $("#matricula2").val();
 
   let data = JSON.parse(localStorage.getItem("data-grp1"));
-  let user = data.users[data.active];
+  let user = data.users[data.users.length - 1];
   let matriculas = Array.isArray(user.car_info) ? user.car_info : [];
 
   // Verificar se a matrícula é válida.'
@@ -35,8 +35,7 @@ function validarMatricula() {
       altura: altura,
     };
     matriculas.push(newMatricula);
-    console.log(matriculas);
-    data.users[data.active].car_info = matriculas;
+    data.users[parseInt(data.active)].car_info = matriculas;
 
     localStorage.setItem("data-grp1", JSON.stringify(data));
     $("#successModal").modal("show");

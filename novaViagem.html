@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapa com Leaflet e Knockout</title>
+    <title>InvisibleToll</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link
       rel="stylesheet"
@@ -33,94 +33,113 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top"
-           style="background-color: #f0cda2">
-          <div class="container">
-              <a class="navbar-brand" href="homescreen.html" tabindex="NBA">
-                  <img src="./images/logo.png" alt="InvisibleToll" height="24" />
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top"
+      style="background-color: #f0cda2"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="homescreen.html" tabindex="NBA"
+          ><img src="./images/logo.png" alt="InvisibleToll" height="24"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html" title="Login"
+                ><i class="fa-solid fa-user"></i>Login
               </a>
-              <button class="navbar-toggler"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" href="login.html" title="Login">
-                              <i class="fa-solid fa-user"></i>Login
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="register.html" title="Registar"><i class="fa-solid fa-circle-up"></i>Registo</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="Conta.html"><i class="fa-solid fa-car"></i>A minha conta</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="novaViagem.html"><i class="fa-solid fa-globe"></i>Nova Viagem</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="Descontos.html"><i class="fa-solid fa-shop"></i>Descontos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="pagamentos.html"><i class="fa-solid fa-coins"></i>Pagamentos</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
-      <div class="container col-6 rounded bg-white shadow-lg p-3 mb-5 rounded"
-           style="
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html" title="Register"
+                ><i class="fa-solid fa-circle-up"></i>Sign in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registerPlacesList.html"
+                ><i class="fa-solid fa-road-circle-check"></i>Places</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Conta.html"
+                ><i class="fa-solid fa-car"></i>MyAccount</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="QuemSomos.html"
+                ><i class="fa-solid fa-people-group"></i>Quem somos?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="novaViagem.html"
+                ><i class="fa-solid fa-globe"></i>Nova Viagem</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="novaViagem.html"
+                ><i class="fa-solid fa-shoop"></i>Descontos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container col-6 rounded bg-white shadow-lg p-3 mb-5 rounded"
+      style="
         margin-top: 10%;
         border: 0;
         box-shadow: 0 0 90px 10px rgba(240, 205, 162, 1) !important    ;
-      ">
-          <div class="row">
-              <div class="col-5">
-                  <div class="form-group">
-                      <label for="startLocation" class="form-check-label">Partida:</label>
-                      <input class="form-control"
-                             id="startLocation"
-                             type="text"
-                             placeholder=" "
-                             data-bind="value: startLocation, event: { input: updateStartLocation }" />
-                  </div>
-
-                  <div class="form-group">
-                      <label for="endLocation" class="form-check-label">Destino:</label>
-                      <input class="form-control"
-                             id="endLocation"
-                             type="text"
-                             placeholder=" "
-                             data-bind="value: endLocation, event: { input: updateEndLocation }" />
-                  </div>
-              </div>
+      "
+    >
+      <div class="row">
+        <div class="col-5">
+          <div class="form-group">
+            <label for="startLocation" class="form-check-label">Partida:</label>
+            <input
+              class="form-control"
+              id="startLocation"
+              type="text"
+              placeholder=" "
+              data-bind="value: startLocation, event: { input: updateStartLocation }"
+            />
           </div>
-          <br />
-          <button class="btn btn-success" data-bind="click: drawRoute">
-              Desenhar Rota
-          </button>
+
+          <div class="form-group">
+            <label for="endLocation" class="form-check-label">Destino:</label>
+            <input
+              class="form-control"
+              id="endLocation"
+              type="text"
+              placeholder=" "
+              data-bind="value: endLocation, event: { input: updateEndLocation }"
+            />
+          </div>
+        </div>
       </div>
-      <div class="container col-10">
-          <div id="map"></div>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-      <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-      <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-      <script src="novaViagem.js"></script>
+      <br />
+      <button class="btn btn-success" data-bind="click: drawRoute">
+        Desenhar Rota
+      </button>
+    </div>
+    <div class="container col-10">
+      <div id="map"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="novaViagem.js"></script>
   </body>
 </html>

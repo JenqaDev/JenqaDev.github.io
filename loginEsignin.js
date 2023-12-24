@@ -17,6 +17,8 @@ function validarLogin() {
       password == data.users[i].password
     ) {
       data.active = i;
+      data.activeEmp = "";
+
       localStorage.setItem("data-grp1", JSON.stringify(data));
       $("#successModal").modal("show");
 
@@ -53,6 +55,7 @@ function validarSignin() {
     };
     data.users.push(newUser);
     data.active = data.users.length - 1;
+    data.activeEmp = "";
     localStorage.setItem("data-grp1", JSON.stringify(data));
 
     $("#successModal").modal("show");

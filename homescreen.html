@@ -74,27 +74,32 @@ a:hover{
             </ul>
           
             <div class="tab-content">
-              <div id="menu1" class="container tab-pane active"><br>
+              <div id="menu1" class="container tab-pane active" ><br>
                 <ul class="list-group lead">
                   <li class="list-group-item"><a class="nav-link g" aria-current="page" href="login.html" title="Login"><i class="fa-solid fa-user"></i></i>Login </a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="register.html" title="Register"><i class="fa-solid fa-circle-up"></i>Registo</a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="Conta.html"><i class="fa-solid fa-car"></i>A minha conta</a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="register.html" title="Register"><i class="fa-solid fa-circle-up"></i>Sign in</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesList.html"><i class="fa-solid fa-road-circle-check"></i>Places</a></li>
+                  
+                  <!-- ko if: active() > -1 -->
+
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="Conta.html"><i class="fa-solid fa-car"></i>MyAccount</a></li>
                   <li class="list-group-item "><a style="color: black;text-decoration: none;"  aria-current="page" href="novaViagem.html"><i class="fa-solid fa-globe"></i>Nova Viagem</a></li>
                   <li class="list-group-item"><a class="nav-link "  aria-current="page" href="Descontos.html"><i class="fa-solid fa-shop"></i>Descontos</a></li>
-
+                  <!-- /ko-->
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="QuemSomos.html"><i class="fa-solid fa-people-group"></i>Quem somos?</a></li>
+                  
                   
                 </ul>
               </div>
 
-              <div id="menu2" class="container tab-pane fade"><br>
+              <div id="menu2" class="container tab-pane fade" ><br>
                 <ul class="list-group lead">
                   <li class="list-group-item"><a class="nav-link " aria-current="page" href="loginEmp.html" title="Login"><i class="fa-solid fa-user"></i></i>Login </a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerEmp.html" title="Register"><i class="fa-solid fa-circle-up"></i>Registo</a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlaces.html" title="Register"><i class="fa-solid fa-circle-up"></i>Adicionar Locais</a></li>
-                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesListEmp.html"><i class="fa-solid fa-road-circle-check"></i>Locais</a></li>
-
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerEmp.html" title="Register"><i class="fa-solid fa-circle-up"></i>Sign in</a></li>
+                  <!-- ko if: activeEmp() > -1-->
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlaces.html" title="Register"><i class="fa-solid fa-circle-up"></i>Add Places</a></li>
+                  <li class="list-group-item"><a class="nav-link " aria-current="page" href="registerPlacesListEmp.html"><i class="fa-solid fa-road-circle-check"></i>Places</a></li>
+                  <!-- /ko-->
                 </ul>
               </div>
             </div>
